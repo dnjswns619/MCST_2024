@@ -6,8 +6,572 @@
   <meta name="keywords" content="문화체육관광부 누리집에 오신 것을 환영합니다., 문화공영, 문화번영, 문화예술, 콘텐츠, 케이컬처, k-culture, 문화매력국가, 문화강국, 스포츠, 전통문화, 한류">
   <meta name="description" content="국민과 함께하는 세계일류 문화매력국가">
   <title>문화체육관광부 누리집에 오신 것을 환영합니다. | 문화체육관광부</title>
+  <!-- 스와이퍼 슬라이드 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- css & js -->
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/custom.js" defer></script>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="header">
+      <div class="header__util">
+        <div class="header__util--inner">
+          <div class="header__util--title title">
+            <img class="title__img" src="./images/eg_logo.png" alt="">
+            <p class="title__text">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p>
+          </div>
+          <ul class="header__util--wrap util">
+            <li class="util__item">
+              <a class="util__item-btn util__item--1" href="#">들어가기</a>
+            </li>
+            <li class="util__item">
+              <a class="util__item-btn util__item--2" href="#">회원가입</a>
+            </li>
+            <li class="util__item">
+              <button class="util__item-btn util__item--3 util__item-btn--borderBox" href="#">LANGUAGE</button>
+              <ul class="language">
+                <li class="language__item">
+                  <a href="#" class="language__item-link language__item--1">English</a>
+                </li>
+                <li class="language__item">
+                  <a href="#" class="language__item-link language__item--2">中文</a>
+                </li>
+                <li class="language__item">
+                  <a href="#" class="language__item-link language__item--3">日本語</a>
+                </li>
+              </ul>
+            </li>
+            <li class="util__item">
+              <a class="util__item-btn util__item--4 util__item-btn--borderBox" href="">어린이</a>
+            </li>
+            <li class="util__item">
+              <a class="util__item-btn util__item--5 util__item-btn--borderBox" href="">전체 메뉴</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header__wrap">
+        <div class="header__inner">
+          <div class="header__title">
+            <a href="#" class="header__title--logo">
+              <img src="./images/logo.png" alt="">
+            </a>
+            <a href="#" class="header__title--slogan">
+              <img src="./images/nation_slogan.png" alt="다시 도약하는 대한민국 함께 잘사는 국민의 나라">
+            </a>
+          </div>
+          <nav class="header__gnb-wrap">
+            <ul class="header__gnb gnb">
+              <li class="gnb__item">
+                <a href="#" class="gnb__item--title gnb__item--1">정보공개</a>
+                <div class="gnb__sub-wrap">
+                  <div class="gnb__sub" data-item-layout="6">
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">정보공개안내</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">정보공개제도 소개</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">비공개 세부기준</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">정보목록</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">정보공개청구</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">업무추진비</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">협동조합경영공시</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">사전정보공개</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                          <a href="#">재정정보</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">계약현황</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">세입·세출 운용상황</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">보조사업현황</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">공공데이터개방</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">공공데이터</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">의견수렴</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">감사·청렴자료</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">감사결과</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">반부패 청렴자료</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">정책실명제</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">정책실명제 안내</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">중점관리 대상사업</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">국민신청실명제</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="gnb__item">
+                <a href="#" class="gnb__item--title gnb__item--2">민원마당</a>
+                <div class="gnb__sub-wrap">
+                  <div class="gnb__sub" data-item-layout="6">
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">전자민원</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">민원안내</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">민원신청</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">신고센터</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">갑질피해신고</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">스포츠비리신고</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">부패·공익 신고</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">공직자종교차별신고</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">예술인권리침해 신고</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">성희롱·성폭력 신고·상담</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">안전신고</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">부조금 부조리 신고</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">암표신고</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                          <a href="#">적극행정</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">우수사례</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">국민참여</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">제도소개</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">규제개혁</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">규제개혁과제</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">규제개혁 건의</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">규제입증요청</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">국민신문고</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">묻고답하기</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">국민제안</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">예산낭비신고</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">소통공간</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">110수어/채팅상담</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">행정서비스헌장</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">누리집개선의견</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="gnb__item">
+                <a href="#" class="gnb__item--title gnb__item--3">참여·소통</a>
+                <div class="gnb__sub-wrap">
+                  <div class="gnb__sub" data-item-layout="6">
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">청년소리의 정원</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">청년소리의 정원 소개</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">청년정책 제안</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">국민신문고</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">정책참여</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="gnb__item">
+                <a href="#" class="gnb__item--title gnb__item--4">알림·소식</a>
+                <div class="gnb__sub-wrap">
+                  <div class="gnb__sub gnb__sub--grid" data-item-layout="5">
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">알림</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">인사</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">채용정보</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">입찰정보</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">보도자료</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item borderNone">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">언론보도설명·정정</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">포상 후보자 접수</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">문화예술발전 유공 포상</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">문화예술회관발전상</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">대한민국장애인문화예술대상</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">사진뉴스</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">동영상뉴스</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">소식지</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="gnb__item">
+                <a href="#" class="gnb__item--title gnb__item--5">문화광장</a>
+                <div class="gnb__sub-wrap">
+                  <div class="gnb__sub" data-item-layout="6">
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">로컬100</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">지역축제</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">추천여행지</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">문화예술공연</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">추천도서</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">체육행사</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="gnb__item">
+                <a href="#" class="gnb__item--title gnb__item--6">자료공간</a>
+                <div class="gnb__sub-wrap">
+                  <div class="gnb__sub" data-item-layout="5">
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">예산자료</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">법령자료</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">현행법령</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">훈령·예규·고시</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">입법·행정예고</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">표준계약서</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">현황자료</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">비영리법인현황</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">출판사 · 인쇄사 등록현황</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">정기간행물 등록현황</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">통계자료</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">연구자료</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="gnb__item">
+                <a href="#" class="gnb__item--title gnb__item--7">주요정책</a>
+                <div class="gnb__sub-wrap">
+                  <div class="gnb__sub" data-item-layout="5">
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">업무계획</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">업무계획</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">국정과제</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">분야별 정책</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">전체</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">기획조정·지원</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">문화예술</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">종무</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">국제문화홍보</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">콘텐츠·저작권·미디어</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">관광</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">국민소통</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">체육</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">기타</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">정책소통</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">대학생기자단</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">홍보물</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="gnb__item">
+                <a href="#" class="gnb__item--title gnb__item--8">문체부소개</a>
+                <div class="gnb__sub-wrap">
+                  <div class="gnb__sub" data-item-layout="5">
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">기관소개</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">주요업무</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">연혁</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">상징(MI)</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">열린장관실</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">장관과의 대화방</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">활동방</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">장·차관소개</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">조직안내</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">조직도</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">직원검색</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">소속시관 안내</a>
+                      </li>
+                    </ul>
+                    <ul class="gnb__sub-item">
+                      <li class="gnb__sub-item--main">
+                        <a href="#">청사안내</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#">찾아오시는 길</a>
+                      </li>
+                      <li class="gnb__sub-item--sub">
+                        <a href="#" class="lastGnb">층별안내</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__search-wrap header__search">
+            <form action="" class="header__search--form">
+              <input type="text" name="" id="search_keyword" class="header__search--input" placeholder="검색어를 입력하세요">
+            </form>
+            <button type="submit" class="header__search--btn"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
