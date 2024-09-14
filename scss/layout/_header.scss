@@ -160,6 +160,7 @@
       width: 100%;
       max-width: 1500px;
       &-wrap {
+        z-index: 50;
         display: none;
         justify-content: center;
         position: absolute;

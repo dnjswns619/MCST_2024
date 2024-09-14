@@ -38,4 +38,65 @@ window.addEventListener("load", () => {
   lastGnbLink.addEventListener("blur", () => {
     gnbSubWrap.forEach(item => item.classList.remove(CLASS_ON))
   })
+
+  const intro = new Swiper(".intro__slide", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  function slideActiveFocus(element) {
+    const slideLink = element.querySelectorAll(`.slide__link`);
+    slideLink?.forEach(link => {
+      link.setAttribute("aria-hidden", false);
+      link.setAttribute("tabindex", 0);
+    })
+    element.setAttribute("aria-hidden", false);
+    element.setAttribute("tabindex", 0);
+  }
+  function slideInactiveFocus(element) {
+    const slideLink = element.querySelectorAll(`.slide__link`);
+    slideLink?.forEach(link => {
+      link.setAttribute("aria-hidden", true);
+      link.setAttribute("tabindex", -1);
+    })
+    element.setAttribute("aria-hidden", true);
+    element.setAttribute("tabindex", -1);
+  }
+  const slideArr = document.querySelectorAll(".swiper-slide");
+  slideArr.forEach(slide => {
+    slide.classList.contains("swiper-slide-active") ? slideActiveFocus(slide) : slideInactiveFocus(slide)
+  })
+  intro.on("slideChangeTransitionStart", () => {
+    slideArr.forEach(slide => {
+      slide.classList.contains("swiper-slide-active") ? slideActiveFocus(slide) : slideInactiveFocus(slide)
+    })
+  })
+
+  const introSlideBtnWrap = document.querySelector(".swiper__btn")
+  const introSlidePlayBtn = document.querySelector(".swiper-button-play");
+  const introSlideStopBtn = document.querySelector(".swiper-button-stop");
+
+  introSlideStopBtn.addEventListener("click", () => {
+    introSlideBtnWrap.classList.remove("play");
+    introSlideBtnWrap.classList.add("stop");
+    intro.autoplay.stop();
+  })
+
+  introSlidePlayBtn.addEventListener("click", () => {
+    introSlideBtnWrap.classList.remove("stop");
+    introSlideBtnWrap.classList.add("play");
+    intro.autoplay.start();
+  })
 })
