@@ -14,3 +14,11 @@
   justify-content: space-between;
   align-items: center;
 }
+@mixin flexJustifyCenter {
+  display: flex;
+  justify-content: center;
+}
+@mixin flexAlignCenter {
+  display: flex;
+  align-items: center;
+}
