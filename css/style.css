@@ -495,21 +495,141 @@ input {
 .cont1__inner {
   display: flex;
   justify-content: space-between;
+  gap: 60px;
   width: 100%;
   max-width: 1500px;
   height: 330px;
   margin: 0 auto;
 }
-.cont1__title {
+.cont1__left {
+  display: flex;
+  position: relative;
+  width: calc(100% - 30px);
+}
+.cont1__right {
+  display: flex;
+  position: relative;
+  width: calc(100% - 30px);
+}
+
+.selectCont__title {
   position: relative;
   padding: 18px 0 13px;
   font-size: 24px;
   color: #555;
 }
-.cont1__title.employ__title, .cont1__title.bid__title {
+.selectCont__title:hover {
+  color: #111;
+}
+.selectCont__title:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #111;
+}
+.selectCont__list {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 258px;
+  padding: 7px 0;
+  border-top: 1px solid #000002;
+  border-bottom: 1px solid #000002;
+}
+.selectCont__list--item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  padding: 12px 0 12px 14px;
+}
+.selectCont__list--item::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 2px;
+  display: block;
+  width: 4px;
+  height: 4px;
+  margin-top: 0;
+  background: #686868;
+}
+.selectCont__list--item:not(:first-child) {
+  border-top: 1px solid #d9d8dd;
+}
+.selectCont__list--text {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-weight: normal;
+}
+.selectCont__list--date {
+  flex-shrink: 0;
+  font-size: 16px;
+  color: #777;
+}
+.selectCont__selectBtn {
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.selectCont__grid {
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 258px;
+}
+.selectCont__grid--item {
+  padding: 1rem;
+  border: 1px solid #d5d5d5;
+}
+.selectCont__grid--text {
+  overflow: hidden;
+  display: -webkit-box;
+  margin-bottom: 0.5em;
+  font-size: 1.1rem;
+  color: #111;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.selectCont__wrap.active .selectCont__list {
+  display: flex;
+}
+.selectCont__wrap.active .selectCont__grid {
+  display: grid;
+}
+.selectCont__wrap.active .selectCont__title {
+  color: #111;
+}
+.selectCont__wrap.active .selectCont__title ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #111;
+}
+.selectCont__wrap:not(:first-child) .selectCont__title {
   margin-left: 30px;
 }
-.cont1__title.employ__title::after, .cont1__title.bid__title::after {
+.selectCont__wrap:not(:first-child) .selectCont__title::after {
   content: "";
   position: absolute;
   top: 37px;
@@ -519,60 +639,4 @@ input {
   height: 4px;
   margin-top: -2px;
   background: #555;
-}
-.cont1__list {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 7px 0;
-  border-top: 1px solid #000002;
-  border-bottom: 1px solid #000002;
-}
-.cont1__list--item {
-  padding: 12px 0 12px 14px;
-}
-.cont1__list--item:not(:first-child) {
-  border-top: 1px solid #d9d8dd;
-}
-.cont1__list--text {
-  overflow: hidden;
-  display: -webkit-box;
-  text-overflow: ellipsis;
-  word-break: break-word;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  font-weight: normal;
-}
-.cont1__linkBtn {
-  font-size: inherit;
-  color: inherit;
-}
-.cont1__left {
-  display: flex;
-  position: relative;
-  width: calc(100% - 30px);
-}
-.cont1__left--box .cont1__list {
-  display: none;
-}
-.cont1__left--box.active .cont1__list {
-  display: block;
-}
-.cont1__left--box.active .cont1__title {
-  color: #111;
-}
-.cont1__left--box.active .cont1__title ::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 2px;
-  background: #111;
-}
-.cont1__right {
-  display: flex;
-  position: relative;
-  width: calc(100% - 30px);
 }/*# sourceMappingURL=style.css.map */
