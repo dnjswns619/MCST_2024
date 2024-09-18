@@ -1,7 +1,6 @@
 .selectCont {
   &__title {
     position: relative;
-    padding: 18px 0 13px;
     font-size: 24px;
     color: #555;
     &:hover {
@@ -60,6 +59,7 @@
     }
   }
   &__selectBtn {
+    padding: 18px 0 13px;
     font-size: inherit;
     color: inherit;
     cursor: pointer;

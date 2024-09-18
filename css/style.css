@@ -514,7 +514,6 @@ input {
 
 .selectCont__title {
   position: relative;
-  padding: 18px 0 13px;
   font-size: 24px;
   color: #555;
 }
@@ -579,6 +578,7 @@ input {
   color: #777;
 }
 .selectCont__selectBtn {
+  padding: 18px 0 13px;
   font-size: inherit;
   color: inherit;
   cursor: pointer;
