@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
   const lastGnbLink = document.querySelector(".lastGnb")
   const activeEventArr = ["mouseenter", "focus"];
   const inactiveEventArr = ["mouseleave", "blur"];
-
+  // 메뉴 호버 & 포커스시 서브 메뉴 보이기
   function gnbSubWrapActive(element) {
     gnbSubWrap.forEach(item => {
       item.classList.remove(CLASS_ON);
@@ -55,7 +55,7 @@ window.addEventListener("load", () => {
       prevEl: ".swiper-button-prev",
     },
   });
-
+  // 활성화된 슬라이드에만 tab으로 이동시 focus가 가도록
   function slideActiveFocus(element) {
     const slideLink = element.querySelectorAll(`.slide__link`);
     slideLink?.forEach(link => {
@@ -83,7 +83,7 @@ window.addEventListener("load", () => {
       slide.classList.contains("swiper-slide-active") ? slideActiveFocus(slide) : slideInactiveFocus(slide)
     })
   })
-
+  // 인트로 자동 슬라이드 제어
   const introSlideBtnWrap = document.querySelector(".swiper__btn")
   const introSlidePlayBtn = document.querySelector(".swiper-button-play");
   const introSlideStopBtn = document.querySelector(".swiper-button-stop");
@@ -99,4 +99,20 @@ window.addEventListener("load", () => {
     introSlideBtnWrap.classList.add("play");
     intro.autoplay.start();
   })
+
+  // 메뉴 클릭시 하단 컨텐츠 변화
+  function activeTitleCont(parent) {
+    const contWrap = document.querySelectorAll(`.${parent} .selectCont__wrap`);
+    const titleBtn = document.querySelectorAll(`.${parent} .selectCont__selectBtn`);
+    titleBtn.forEach(btn => {
+      btn.addEventListener("click", () => {
+        contWrap.forEach(cont => {
+          cont.classList.remove("active");
+        })
+        btn.closest(".selectCont__wrap").classList.add("active");
+      })
+    })
+  }
+  activeTitleCont("cont1__left");
+  activeTitleCont("cont1__right");
 })
