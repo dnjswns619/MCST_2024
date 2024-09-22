@@ -115,4 +115,5 @@ window.addEventListener("load", () => {
   }
   activeTitleCont("cont1__left");
   activeTitleCont("cont1__right");
+  activeTitleCont("cont2__left");
 })
