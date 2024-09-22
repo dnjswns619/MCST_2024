@@ -370,12 +370,12 @@ input {
 .intro .slide__textBox--title {
   overflow: hidden;
   display: -webkit-box;
-  margin-bottom: 40px;
-  font-size: 2.5rem;
   text-overflow: ellipsis;
   word-break: break-word;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
   font-weight: normal;
 }
 .intro .slide__textBox--info {
@@ -489,29 +489,6 @@ input {
   background: transparent;
 }
 
-.cont1 {
-  margin-top: 65px;
-}
-.cont1__inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 60px;
-  width: 100%;
-  max-width: 1500px;
-  height: 330px;
-  margin: 0 auto;
-}
-.cont1__left {
-  display: flex;
-  position: relative;
-  width: calc(100% - 30px);
-}
-.cont1__right {
-  display: flex;
-  position: relative;
-  width: calc(100% - 30px);
-}
-
 .selectCont__title {
   position: relative;
   font-size: 24px;
@@ -528,6 +505,14 @@ input {
   width: 30px;
   height: 2px;
   background: #111;
+}
+.selectCont__box {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 320px;
 }
 .selectCont__list {
   display: none;
@@ -600,13 +585,13 @@ input {
 .selectCont__grid--text {
   overflow: hidden;
   display: -webkit-box;
-  margin-bottom: 0.5em;
-  font-size: 1.1rem;
-  color: #111;
   text-overflow: ellipsis;
   word-break: break-word;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  margin-bottom: 0.5em;
+  font-size: 1.1rem;
+  color: #111;
 }
 .selectCont__moreView {
   display: none;
@@ -619,6 +604,9 @@ input {
 }
 .selectCont__wrap.active .selectCont__list {
   display: flex;
+}
+.selectCont__wrap.active .selectCont__box {
+  display: block;
 }
 .selectCont__wrap.active .selectCont__grid {
   display: grid;
@@ -651,4 +639,84 @@ input {
   height: 4px;
   margin-top: -2px;
   background: #555;
+}
+
+.cont1 {
+  margin-top: 65px;
+}
+.cont1__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  max-width: 1500px;
+  height: 330px;
+  margin: 0 auto;
+}
+.cont1__left {
+  display: flex;
+  position: relative;
+  width: calc(100% - 30px);
+}
+.cont1__right {
+  display: flex;
+  position: relative;
+  width: calc(100% - 30px);
+}
+
+.cont2 {
+  margin-top: 65px;
+}
+.cont2__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  max-width: 1500px;
+  height: 390px;
+  margin: 0 auto;
+}
+.cont2 .cont2__right, .cont2 .cont2__middle, .cont2 .cont2__left {
+  display: flex;
+  position: relative;
+}
+.cont2__left--box.active .news__desc {
+  display: block;
+}
+.cont2__middle--recommend {
+  width: 100%;
+}
+.cont2 .news__thumnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cont2 .news__desc {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.7em;
+  background-color: rgba(0, 0, 0, 0.5);
+  white-space: noWrap;
+  color: #fff;
+}
+.cont2 .recommend__wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 320px;
+  border-collapse: collapse;
+}
+.cont2 .recommend__item {
+  border: 1px solid #e3e3e3;
 }/*# sourceMappingURL=style.css.map */
