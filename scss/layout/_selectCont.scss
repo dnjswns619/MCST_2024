@@ -89,6 +89,15 @@
       -webkit-box-orient: vertical;
     }
   }
+  &__moreView {
+    display: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url(../../images/btn_main_more.png) center / contain no-repeat;
+    top: 0;
+    right: 0;
+  }
   &__wrap {
     &.active {
       .selectCont__list { display: flex; }
@@ -100,6 +109,7 @@
         }
         
       }
+      .selectCont__moreView { display: block; }
     }
     &:not(:first-child) {
       .selectCont__title {

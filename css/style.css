@@ -608,6 +608,15 @@ input {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+.selectCont__moreView {
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url(../../images/btn_main_more.png) center/contain no-repeat;
+  top: 0;
+  right: 0;
+}
 .selectCont__wrap.active .selectCont__list {
   display: flex;
 }
@@ -625,6 +634,9 @@ input {
   width: 30px;
   height: 2px;
   background: #111;
+}
+.selectCont__wrap.active .selectCont__moreView {
+  display: block;
 }
 .selectCont__wrap:not(:first-child) .selectCont__title {
   margin-left: 30px;
