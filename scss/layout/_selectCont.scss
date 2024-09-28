@@ -66,6 +66,11 @@
     font-size: inherit;
     color: inherit;
     cursor: pointer;
+    &.activeNoneChange {
+      &::before {
+        @include titleActiveBefore;
+      }
+    }
   }
   &__grid {
     display: none;
