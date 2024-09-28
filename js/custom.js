@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
     gnbSubWrap.forEach(item => item.classList.remove(CLASS_ON))
   })
 
-  const intro = new Swiper(".intro__slide", {
+  const introSwiperSlide = new Swiper(".intro__slide", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
@@ -53,6 +53,22 @@ window.addEventListener("load", () => {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+  });
+  const noticeSwiperSlide = new Swiper(".notice__slide", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".notice__swiperBtn .swiper-pagination",
+      type: "fraction"
+    },
+    navigation: {
+      nextEl: ".notice__swiperBtn .swiper-button-next",
+      prevEl: ".notice__swiperBtn .swiper-button-prev",
     },
   });
   // 활성화된 슬라이드에만 tab으로 이동시 focus가 가도록
@@ -78,27 +94,31 @@ window.addEventListener("load", () => {
   slideArr.forEach(slide => {
     slide.classList.contains("swiper-slide-active") ? slideActiveFocus(slide) : slideInactiveFocus(slide)
   })
-  intro.on("slideChangeTransitionStart", () => {
+  introSwiperSlide.on("slideChangeTransitionStart", () => {
     slideArr.forEach(slide => {
       slide.classList.contains("swiper-slide-active") ? slideActiveFocus(slide) : slideInactiveFocus(slide)
     })
   })
-  // 인트로 자동 슬라이드 제어
-  const introSlideBtnWrap = document.querySelector(".swiper__btn")
-  const introSlidePlayBtn = document.querySelector(".swiper-button-play");
-  const introSlideStopBtn = document.querySelector(".swiper-button-stop");
+  // 자동 슬라이드 제어
+  function autoSlideControl(element, slide) {
+    const slideBtnWrap = document.querySelector(`${element} .swiper__btn`)
+    const slidePlayBtn = document.querySelector(`${element} .swiper-button-play`);
+    const slideStopBtn = document.querySelector(`${element} .swiper-button-stop`);
 
-  introSlideStopBtn.addEventListener("click", () => {
-    introSlideBtnWrap.classList.remove("play");
-    introSlideBtnWrap.classList.add("stop");
-    intro.autoplay.stop();
-  })
-
-  introSlidePlayBtn.addEventListener("click", () => {
-    introSlideBtnWrap.classList.remove("stop");
-    introSlideBtnWrap.classList.add("play");
-    intro.autoplay.start();
-  })
+    slideStopBtn.addEventListener("click", () => {
+      slideBtnWrap.classList.remove("play");
+      slideBtnWrap.classList.add("stop");
+      slide.autoplay.stop();
+    })
+  
+    slidePlayBtn.addEventListener("click", () => {
+      slideBtnWrap.classList.remove("stop");
+      slideBtnWrap.classList.add("play");
+      slide.autoplay.start();
+    })
+  }
+  autoSlideControl(".intro", introSwiperSlide);
+  autoSlideControl(".notice", noticeSwiperSlide);
 
   // 메뉴 클릭시 하단 컨텐츠 변화
   function activeTitleCont(parent) {
