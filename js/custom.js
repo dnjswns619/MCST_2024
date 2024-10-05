@@ -79,6 +79,14 @@ window.addEventListener("load", () => {
     slidesPerView: 4,
     spaceBetween: 30,
   });
+  const agencyBannerSlide = new Swiper(".agency__banner-slide", {
+    slidesPerView: 5,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".agency__banner-slide--nextBtn",
+      prevEl: ".agency__banner-slide--prevBtn",
+    },
+  });
   // 활성화된 슬라이드에만 tab으로 이동시 focus가 가도록
   function slideActiveFocus(element) {
     const slideLink = element.querySelectorAll(`.slide__link`);

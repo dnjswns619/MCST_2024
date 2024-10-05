@@ -1,0 +1,103 @@
+.agency {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+  height: 292px;
+  background: #e7f0f9 url(../images/bg_pattern_bottom.png);
+  &__inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1500px;
+  }
+  &__leftCont {
+    width: auto;
+    height: 100%;
+  }
+  &__rightCont {
+    @include flexColCenter;
+    width: calc(100% - 370px);
+    height: 100%;
+  }
+  &__select {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+    &-wrap {
+      display: flex;
+      width: 35%;
+      border: 1px solid #6c7e90;
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+    &-form {
+      flex-grow: 1;
+    }
+    &-box {
+      width: 100%;
+      height: 100%;
+      padding-left: 1em;
+      background: #e7f0f9 url(../images/select_bg.gif) no-repeat;
+      background-position: right 1em center;
+      border: none;
+      appearance: none;
+      color: #696969;
+    }
+    &--submitBtn {
+      width: 50px;
+      height: 37px;
+      background: #6c7e90;
+      color: #fff;
+      line-height: 37px;
+      text-align: center;
+    }
+  }
+  &__banner-wrap {
+    position: relative;
+    width: calc(70% + 70px);
+  }
+  &__banner-slide {
+    width: 100%;
+    &--item {
+      height: 55px;
+      border: 1px solid #c6d0d9;
+      background: #fff;
+    }
+    &--link {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    &--arrowBtn {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 24px;
+      margin-top: 0;
+      background: url(../images/sprite_img01.png) no-repeat;
+      background-position: -470px 0;
+      &::after { display: none; }
+      &.swiper-button-disabled {
+        display: none;
+      }
+    }
+    &--prevBtn {
+      left: -40px;
+      transform: translateY(-50%) scaleX(-1);
+    }
+    &--nextBtn {
+      right: -40px;
+    }
+  }
+}
