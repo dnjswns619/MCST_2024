@@ -1090,4 +1090,76 @@ input {
 }
 .agency__banner-slide--nextBtn {
   right: -40px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 4rem;
+}
+.footer__inner {
+  display: flex;
+  width: 100%;
+  max-width: 1500px;
+}
+.footer__left {
+  display: flex;
+  gap: 3rem;
+}
+.footer__logo {
+  width: 175px;
+}
+.footer__logo-img {
+  width: 100%;
+  height: auto;
+}
+.footer__info-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.footer__info--link {
+  display: flex;
+  gap: 1rem;
+}
+.footer__link-list {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 5px 1rem 5px 0;
+}
+.footer__link-list:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 15px;
+  background: #cacaca;
+}
+.footer__link {
+  font-size: 17px;
+}
+.footer__link--information {
+  color: #b81613;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.footer__address {
+  color: #676767;
+  font-style: normal;
+}
+.footer__address-tel {
+  font-weight: bold;
+  color: #0a6da6;
+}
+.footer__right {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+  padding-top: 10px;
+}
+.footer__right-banner {
+  display: flex;
+  align-items: center;
+  height: 65px;
 }/*# sourceMappingURL=style.css.map */
