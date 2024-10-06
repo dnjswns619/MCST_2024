@@ -2,10 +2,10 @@
 .cont3 {
   margin-top: 56px;
   &__inner {
+    @include inner;
     display: flex;
     position: relative;
     width: 100%;
-    max-width: 1500px;
     height: 365px;
     margin: 0 auto;
   }

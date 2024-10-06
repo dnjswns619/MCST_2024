@@ -2,12 +2,12 @@
 .cont2 {
   margin-top: 65px;
   &__inner {
+    @include inner;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
     gap: 30px;
     width: 100%;
-    max-width: 1500px;
     height: 390px;
     margin: 0 auto;
   }
