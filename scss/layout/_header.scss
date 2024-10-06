@@ -10,9 +10,9 @@
     background-color: var(--color-main);
     &--inner {
       @include flexSpaceBetween;
+      @include inner;
       width: 100%;
       height: 100%;
-      max-width: 1500px;
     }
     &--title {
       display: flex;
@@ -109,9 +109,9 @@
   }
   &__inner {
     @include flexSpaceBetween;
+    @include inner;
     width: 100%;
     height: 100%;
-    max-width: 1500px;
   }
   &__title {
     @include flexCenter;
@@ -157,9 +157,9 @@
       }
     }
     &__sub {
+      @include inner;
       display: flex;
       width: 100%;
-      max-width: 1500px;
       &-wrap {
         z-index: 50;
         display: none;

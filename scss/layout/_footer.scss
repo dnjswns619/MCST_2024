@@ -4,9 +4,9 @@
   justify-content: center;
   margin: 2rem 0 4rem;
   &__inner {
+    @include inner;
     display: flex;
     width: 100%;
-    max-width: 1500px;
   }
   &__left {
     display: flex;

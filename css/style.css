@@ -82,9 +82,15 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1500px;
   width: 100%;
   height: 100%;
-  max-width: 1500px;
+}
+@media screen and (max-width: 1500px) {
+  .header__util--inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .header__util--title {
   display: flex;
@@ -184,9 +190,15 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1500px;
   width: 100%;
   height: 100%;
-  max-width: 1500px;
+}
+@media screen and (max-width: 1500px) {
+  .header__inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .header__title {
   display: flex;
@@ -237,9 +249,15 @@ input {
   display: flex;
 }
 .header .gnb__sub {
+  max-width: 1500px;
   display: flex;
   width: 100%;
-  max-width: 1500px;
+}
+@media screen and (max-width: 1500px) {
+  .header .gnb__sub {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .header .gnb__sub-wrap {
   z-index: 50;
@@ -337,9 +355,15 @@ input {
   height: 100%;
 }
 .intro__slide--wrap {
-  width: 100%;
   max-width: 1500px;
+  width: 100%;
   transition-duration: 3s !important;
+}
+@media screen and (max-width: 1500px) {
+  .intro__slide--wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .intro__slide--item {
   display: flex;
@@ -356,10 +380,16 @@ input {
 .intro .slide__inner {
   display: flex;
   justify-content: center;
+  max-width: 1500px;
   width: 100%;
   height: 100%;
-  max-width: 1500px;
   padding: 2rem 0;
+}
+@media screen and (max-width: 1500px) {
+  .intro .slide__inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .intro .slide__textBox {
   display: flex;
@@ -654,13 +684,19 @@ input {
   margin-top: 65px;
 }
 .cont1__inner {
+  max-width: 1500px;
   display: flex;
   justify-content: space-between;
   gap: 60px;
   width: 100%;
-  max-width: 1500px;
   height: 330px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1500px) {
+  .cont1__inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .cont1__left {
   display: flex;
@@ -677,14 +713,20 @@ input {
   margin-top: 65px;
 }
 .cont2__inner {
+  max-width: 1500px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   gap: 30px;
   width: 100%;
-  max-width: 1500px;
   height: 390px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1500px) {
+  .cont2__inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .cont2 .cont2__right, .cont2 .cont2__middle, .cont2 .cont2__left {
   display: flex;
@@ -871,12 +913,18 @@ input {
   margin-top: 56px;
 }
 .cont3__inner {
+  max-width: 1500px;
   display: flex;
   position: relative;
   width: 100%;
-  max-width: 1500px;
   height: 365px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1500px) {
+  .cont3__inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .cont3__text {
   height: fit-content;
@@ -991,10 +1039,16 @@ input {
   background: #e7f0f9 url(../images/bg_pattern_bottom.png);
 }
 .agency__inner {
+  max-width: 1500px;
   display: flex;
   width: 100%;
   height: 100%;
-  max-width: 1500px;
+}
+@media screen and (max-width: 1500px) {
+  .agency__inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .agency__leftCont {
   width: auto;
@@ -1098,9 +1152,15 @@ input {
   margin: 2rem 0 4rem;
 }
 .footer__inner {
+  max-width: 1500px;
   display: flex;
   width: 100%;
-  max-width: 1500px;
+}
+@media screen and (max-width: 1500px) {
+  .footer__inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .footer__left {
   display: flex;
