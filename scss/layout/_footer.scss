@@ -26,12 +26,13 @@
     }
     &--link {
       display: flex;
-      gap: 1rem;
+      flex-wrap: wrap;
+      column-gap: 1rem;
+      margin-bottom: 1rem;
     }
   }
   &__link-list {
     position: relative;
-    margin-bottom: 1rem;
     padding: 5px 1rem 5px 0;
     &:not(:last-child)::after {
       content: "";
@@ -46,6 +47,10 @@
   }
   &__link {
     font-size: 17px;
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
     &--information {
       color: #b81613 ;
       text-decoration: underline;

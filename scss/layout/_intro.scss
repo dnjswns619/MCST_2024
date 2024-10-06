@@ -6,7 +6,7 @@
     width: 100%;
     height: 100%;
     &--wrap {
-      @include inner;
+      max-width: 1500px;
       width: 100%;
       transition-duration: 3s !important;
     }
@@ -153,6 +153,17 @@
         &-active {
           background: transparent;
         }
+      }
+    }
+  }
+}
+
+@include maxRespond($breakpoint-1500) {
+  .intro {
+    .swiper {
+      &__btn {
+        left: 1rem;
+        margin-left: 0;
       }
     }
   }

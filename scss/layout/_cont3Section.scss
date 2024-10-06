@@ -108,3 +108,11 @@
     }
   }
 }
+
+@include maxRespond($breakpoint-1500) {
+  .cont3 {
+    .swiper {
+      padding: 0 15px;
+    }
+  }
+}
