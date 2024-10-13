@@ -26,17 +26,50 @@ window.addEventListener("load", () => {
     })
     title.addEventListener("mouseleave", () => {
       gnbSubWrap[idx].classList.remove(CLASS_ON)
+      if(window.innerWidth < 1200) {
+        gnbSubWrap[0].classList.add(CLASS_ON);
+      }
     })
   })
   inactiveEventArr.forEach(event => {
     gnbSubWrap.forEach(item => {
       item.addEventListener(event, () => {
         item.classList.remove(CLASS_ON);
+        if(window.innerWidth < 1200) {
+          gnbSubWrap[0].classList.add(CLASS_ON);
+        }
       })
     })
   })
   lastGnbLink.addEventListener("blur", () => {
     gnbSubWrap.forEach(item => item.classList.remove(CLASS_ON))
+  })
+
+  // 모바일 메뉴 활성화
+  const mobileMenuBtn = document.querySelector(".m-menu__open-btn");
+  const menuWrap = document.querySelector(".header__gnb-wrap");
+  mobileMenuBtn.addEventListener("click", () => {
+    menuWrap.classList.add(CLASS_ON);
+    document.body.classList.add("menuActive")
+  })
+  function windowSize(width, height) {
+    if(width < 1200) {
+      document.querySelector(".header").classList.add("m-menu");
+    } else {
+      document.querySelector(".header").classList.remove("m-menu");
+    }
+  }
+  window.onresize = function() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;	
+    windowSize(width, height);
+  }
+  windowSize(window.innerWidth, window.innerHeight);
+
+  // 모바일 메뉴 닫기
+  const menuCloseBtn = document.querySelector(".m-menu__close-btn");
+  menuCloseBtn.addEventListener("click", () => {
+    menuWrap.classList.remove(CLASS_ON);
   })
 
   const introSwiperSlide = new Swiper(".intro__slide", {
