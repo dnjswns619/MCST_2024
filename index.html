@@ -54,6 +54,7 @@
       </div>
       <div class="header__wrap">
         <div class="header__inner">
+          <button class="m-menu__open-btn"></button>
           <div class="header__title">
             <a href="#" class="header__title--logo">
               <img src="./images/logo.png" alt="">
@@ -63,6 +64,34 @@
             </a>
           </div>
           <nav class="header__gnb-wrap">
+            <ul class="m-menu__util--wrap util">
+              <li class="util__item">
+                <a class="util__item-btn util__item--1" href="#">들어가기</a>
+              </li>
+              <li class="util__item">
+                <a class="util__item-btn util__item--2" href="#">회원가입</a>
+              </li>
+              <li class="util__item">
+                <button class="util__item-btn util__item--3 util__item-btn--borderBox" href="#">LANGUAGE</button>
+                <ul class="language">
+                  <li class="language__item">
+                    <a href="#" class="language__item-link language__item--1">English</a>
+                  </li>
+                  <li class="language__item">
+                    <a href="#" class="language__item-link language__item--2">中文</a>
+                  </li>
+                  <li class="language__item">
+                    <a href="#" class="language__item-link language__item--3">日本語</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="util__item">
+                <a class="util__item-btn util__item--4 util__item-btn--borderBox" href="">어린이</a>
+              </li>
+              <li class="m-menu__close-wrap">
+                <button class="m-menu__close-btn"></button>
+              </li>
+            </ul>
             <ul class="header__gnb gnb">
               <li class="gnb__item">
                 <a href="#" class="gnb__item--title gnb__item--1">정보공개</a>
@@ -563,6 +592,7 @@
               </li>
             </ul>
           </nav>
+          <button class="m-menu__search-open-btn"></button>
           <div class="header__search-wrap header__search">
             <form action="" class="header__search--form">
               <input type="text" name="" id="search_keyword" class="header__search--input" placeholder="검색어를 입력하세요">

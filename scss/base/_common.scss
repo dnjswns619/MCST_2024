@@ -12,6 +12,7 @@
 body {
   margin: 0;
   font-family: var(--font-kr);
+  &.menuActive { overflow: hidden; }
 }
 a {
   text-decoration: none;
