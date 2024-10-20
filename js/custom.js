@@ -70,6 +70,7 @@ window.addEventListener("load", () => {
   const menuCloseBtn = document.querySelector(".m-menu__close-btn");
   menuCloseBtn.addEventListener("click", () => {
     menuWrap.classList.remove(CLASS_ON);
+    document.body.classList.remove("menuActive")
   })
 
   const introSwiperSlide = new Swiper(".intro__slide", {
@@ -118,6 +119,20 @@ window.addEventListener("load", () => {
     navigation: {
       nextEl: ".agency__banner-slide--nextBtn",
       prevEl: ".agency__banner-slide--prevBtn",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,  //브라우저가 768보다 클 때
+        spaceBetween: 10,
+      },
+      900: {
+        slidesPerView: 4,  //브라우저가 1024보다 클 때
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 5,  //브라우저가 1024보다 클 때
+        spaceBetween: 10,
+      },
     },
   });
   // 활성화된 슬라이드에만 tab으로 이동시 focus가 가도록
