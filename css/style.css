@@ -1220,8 +1220,17 @@ input {
   }
 }
 .agency__leftCont {
-  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 100%;
+  max-width: 349px;
+}
+.agency__leftCont-link {
+  width: 100%;
+  height: 292px;
+  background: #4f6280 url(../../images/banner_bottom3.gif) center/contain no-repeat;
 }
 .agency__rightCont {
   display: flex;
@@ -1314,7 +1323,17 @@ input {
 .agency__banner-slide--nextBtn {
   right: -40px;
 }
+@media (max-width: 1430px) {
+  .agency__leftCont {
+    max-width: 24.4056vw;
+  }
+}
 
+@media screen and (max-width: 1200px) {
+  .agency__rightCont {
+    flex-grow: 1;
+  }
+}
 .footer {
   display: flex;
   justify-content: center;
