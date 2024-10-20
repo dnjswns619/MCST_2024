@@ -12,8 +12,15 @@
     height: 100%;
   }
   &__leftCont {
-    width: auto;
+    @include flexCenter;
+    width: 100%;
     height: 100%;
+    max-width: 349px;
+    &-link {
+      width: 100%;
+      height: 292px;
+      background: #4f6280 url(../../images/banner_bottom3.gif) center / contain no-repeat
+    }
   }
   &__rightCont {
     @include flexColCenter;
@@ -99,6 +106,18 @@
     }
     &--nextBtn {
       right: -40px;
+    }
+  }
+  @media (max-width: 1430px) {
+    &__leftCont {
+      max-width: 24.4056vw;
+    }
+  }
+}
+@include maxRespond($breakpoint-1200) {
+  .agency {
+    &__rightCont {
+      flex-grow: 1;
     }
   }
 }
