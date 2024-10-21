@@ -323,6 +323,7 @@
         display: flex;
         &__item {
           &-btn {
+            font-size: 14px;
             color: #000;
           }
         }
@@ -375,6 +376,7 @@
           }
           &--main {
             margin-bottom: 1rem;
+            font-size: 17px;
           }
         }
         &[data-item-layout="5"] {
@@ -448,6 +450,13 @@
 // 화면 사이즈 480px 이하
 @include maxRespond($breakpoint-480) {
   .header {
+    &__gnb-wrap {
+      .util {
+        &__item-btn {
+          padding: 0 0.5rem;
+        }
+      }
+    }
     &__util {
       .title__text {
         font-size: 13px;

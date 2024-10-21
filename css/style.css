@@ -406,6 +406,7 @@ input {
     display: flex;
   }
   .header__gnb-wrap .util__item-btn {
+    font-size: 14px;
     color: #000;
   }
   .header .gnb__item {
@@ -454,6 +455,7 @@ input {
   }
   .header .gnb__sub-item--main {
     margin-bottom: 1rem;
+    font-size: 17px;
   }
   .header .gnb__sub[data-item-layout="5"] .gnb__sub-item {
     flex: 0 0 auto;
@@ -511,6 +513,9 @@ input {
   }
 }
 @media screen and (max-width: 480px) {
+  .header__gnb-wrap .util__item-btn {
+    padding: 0 0.5rem;
+  }
   .header__util .title__text {
     font-size: 13px;
   }
