@@ -134,3 +134,25 @@
     }
   }
 }
+
+@include maxRespond($breakpoint-1200) {
+  .selectCont {
+    &__wrap {
+      &:not(:first-child) {
+        .selectCont__title {
+          margin-left: 20px;
+          &::after {
+            top: 33px;
+            left: -12px;
+          }
+        }
+      }
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__grid {
+      gap: 0.5rem;
+    }
+  }
+}

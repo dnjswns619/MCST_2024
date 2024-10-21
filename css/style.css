@@ -862,6 +862,21 @@ input {
   background: #555;
 }
 
+@media screen and (max-width: 1200px) {
+  .selectCont__wrap:not(:first-child) .selectCont__title {
+    margin-left: 20px;
+  }
+  .selectCont__wrap:not(:first-child) .selectCont__title::after {
+    top: 33px;
+    left: -12px;
+  }
+  .selectCont__title {
+    font-size: 20px;
+  }
+  .selectCont__grid {
+    gap: 0.5rem;
+  }
+}
 .cont1 {
   margin-top: 65px;
 }
