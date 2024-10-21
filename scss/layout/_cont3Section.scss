@@ -201,13 +201,13 @@
         &-prev {
           left: 0;
           &::after {
-            background: url(../../images/sprite_img01.png) no-repeat -320px -130px;
+            background: url(../images/sprite_img01.png) no-repeat -320px -130px;
           }
         }
         &-next {
           right: 0;
           &::after {
-            background: url(../../images/sprite_img01.png) no-repeat -350px -130px;
+            background: url(../images/sprite_img01.png) no-repeat -350px -130px;
           }
         }
       }
