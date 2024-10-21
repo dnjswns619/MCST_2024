@@ -1416,6 +1416,23 @@ input {
     flex-grow: 1;
   }
 }
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .agency__select-wrap {
+    width: 42%;
+  }
+  .agency__select-wrap:not(:last-child) {
+    margin-right: 20px;
+  }
+  .agency__banner-wrap {
+    width: calc(75% + 70px);
+  }
+  .agency__banner-slide--prevBtn {
+    left: -25px;
+  }
+  .agency__banner-slide--nextBtn {
+    right: -25px;
+  }
+}
 .footer {
   display: flex;
   justify-content: center;
