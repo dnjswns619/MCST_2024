@@ -155,6 +155,14 @@ window.addEventListener("load", () => {
       },
     },
   });
+  const mobileAgencyBannerSlide = new Swiper(".agency__m-banner-slide", {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".agency__m-banner-slide--nextBtn",
+      prevEl: ".agency__m-banner-slide--prevBtn",
+    }
+  });
   // 활성화된 슬라이드에만 tab으로 이동시 focus가 가도록
   function slideActiveFocus(element) {
     const slideLink = element.querySelectorAll(`.slide__link`);
