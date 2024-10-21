@@ -143,6 +143,9 @@
 // 화면 사이즈 769px이상 1200px이하
 @include minMaxRespond($breakpoint-769, $breakpoint-1200) {
   .cont3 {
+    &__inner {
+      height: 330px;
+    }
     .swiper {
       &__slide {
         &--descTit {
