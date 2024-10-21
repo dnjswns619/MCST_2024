@@ -60,3 +60,8 @@
     @content;
   }
 }
+@mixin minMaxRespond($minSize, $maxSize) {
+  @media screen and (min-width:$minSize) and (max-width:$maxSize) {
+    @content;
+  }
+}

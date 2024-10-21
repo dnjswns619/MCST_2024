@@ -210,3 +210,33 @@
     }
   }
 }
+// 화면 사이즈 1200px 이하
+@include minMaxRespond($breakpoint-769, $breakpoint-1200) {
+  .cont2 {
+    &__inner {
+      gap: 15px;
+    }
+    .recommend {
+      &__title {
+        font-size: 20px;
+      }
+      &__link {
+        &--text {
+          font-size: 1rem;
+          word-break: keep-all;
+        }
+      }
+    }
+    .notice {
+      &__title {
+        font-size: 20px;
+      }
+      &__slideImg {
+        object-fit: fill;
+      }
+      .swiper-pagination {
+        letter-spacing: -1px;
+      }
+    }
+  }
+}
