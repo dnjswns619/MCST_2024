@@ -701,6 +701,60 @@ input {
     width: 48%;
   }
 }
+@media screen and (max-width: 768px) {
+  .intro {
+    height: auto;
+  }
+  .intro .slide__inner {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 15px 80px;
+  }
+  .intro .slide__textBox {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .intro .slide__textBox--title {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    -webkit-line-clamp: 1;
+  }
+  .intro .slide__textBox--info {
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 1rem;
+  }
+  .intro .slide__textBox--moreBtn {
+    position: absolute;
+    bottom: 16px;
+    width: 105px;
+    padding-top: 10px;
+    margin-top: 0;
+    background-position: top -73px left -90px;
+    font-size: 14px;
+  }
+  .intro .slide__imgBox {
+    width: 100%;
+  }
+  .intro .slide__imgBox--link {
+    height: auto;
+  }
+  .intro .slide__imgBox--img {
+    width: 100%;
+    height: auto;
+    object-fit: initial;
+  }
+  .intro .swiper__btn {
+    left: auto;
+    right: 15px;
+    bottom: 16px;
+  }
+}
 .selectCont__title {
   position: relative;
   font-size: 24px;
