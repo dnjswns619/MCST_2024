@@ -579,6 +579,7 @@ input {
   font-size: 1.2rem;
 }
 .intro .slide__imgBox {
+  display: flex;
   width: 55%;
   height: 100%;
 }
@@ -681,6 +682,23 @@ input {
   .intro .swiper__btn {
     left: 1rem;
     margin-left: 0;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .intro .slide__inner {
+    justify-content: space-between;
+  }
+  .intro .slide__textBox {
+    padding-top: 0;
+  }
+  .intro .slide__textBox--title {
+    font-size: 2.2rem;
+  }
+  .intro .slide__textBox--moreBtn {
+    font-size: 1rem;
+  }
+  .intro .slide__imgBox {
+    width: 48%;
   }
 }
 .selectCont__title {

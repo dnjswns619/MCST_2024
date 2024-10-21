@@ -54,6 +54,7 @@
       }
     }
     &__imgBox {
+      display: flex;
       width: 55%;
       height: 100%;
       &--link {
@@ -157,13 +158,35 @@
     }
   }
 }
-
+// 화면 사이즈 1500px 이하
 @include maxRespond($breakpoint-1500) {
   .intro {
     .swiper {
       &__btn {
         left: 1rem;
         margin-left: 0;
+      }
+    }
+  }
+}
+// 화면 사이즈 1200px 이하
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .intro {
+    .slide {
+      &__inner {
+        justify-content: space-between;
+      }
+      &__textBox {
+        padding-top: 0;
+        &--title {
+          font-size: 2.2rem;
+        }
+        &--moreBtn {
+          font-size: 1rem;
+        }
+      }
+      &__imgBox {
+        width: 48%;
       }
     }
   }
