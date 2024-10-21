@@ -122,3 +122,11 @@
     }
   }
 }
+// 화면 사이즈 480px 이하
+@include maxRespond($breakpoint-480) {
+  .footer {
+    &__address {
+      font-size: 13px;
+    }
+  }
+}

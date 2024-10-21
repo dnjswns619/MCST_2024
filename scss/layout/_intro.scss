@@ -245,3 +245,15 @@
     }
   }
 }
+// 화면 사이즈 480px 이하
+@include maxRespond($breakpoint-480) {
+  .intro {
+    .slide {
+      &__textBox {
+        &--title {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

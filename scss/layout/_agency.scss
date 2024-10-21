@@ -216,3 +216,14 @@
     }
   }
 }
+// 화면 사이즈 480px 이하
+@include maxRespond($breakpoint-480) {
+  .agency {
+    height: 230px;
+    &__leftCont { display: none; }
+    &__rightCont {
+      max-width: 100%;
+      height: 126px;
+    }
+  }
+}
