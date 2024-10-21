@@ -21,3 +21,20 @@
     width: calc(100% - 30px);
   }
 }
+// 화면 사이즈 768px 이하
+@include maxRespond($breakpoint-768) {
+  .cont1 {
+    &__inner {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 40px;
+      height: calc((330px * 2) + 40px);
+    }
+    &__left {
+      height: 330px;
+    }
+    &__right {
+      height: 330px;
+    }
+  }
+}
