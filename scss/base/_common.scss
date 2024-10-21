@@ -49,3 +49,26 @@ input {
   clip: rect(0 0 0 0);
   clip-path: polygon(0 0, 0 0, 0 0, 0 0);
 }
+.skip {
+  position: relative;
+  z-index: 9999;
+  width: 100%;
+  font-size: 0;
+  line-height: 0;
+}
+.skip ul li a {
+  font-size: 0;
+  line-height: 0;
+}
+.skip ul li a:focus {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  padding: 1em 0;
+  background: #fff;
+  border: 2px solid #407CD5;
+  text-align: center;
+  font-size: 14px;
+  color: #000000;
+}

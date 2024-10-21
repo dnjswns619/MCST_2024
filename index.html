@@ -14,6 +14,12 @@
   <script src="./js/custom.js" defer></script>
 </head>
 <body>
+  <div class="skip">
+    <ul>
+      <li><a href="#main">본문 바로가기</a></li>
+      <li><a href="#gnb">주메뉴 바로가기</a></li>
+    </ul>
+  </div>
   <div class="container">
     <header class="header">
       <div class="header__util">
@@ -92,7 +98,7 @@
                 <button class="m-menu__close-btn"></button>
               </li>
             </ul>
-            <ul class="header__gnb gnb">
+            <ul id="gnb" class="header__gnb gnb">
               <li class="gnb__item">
                 <a href="#" class="gnb__item--title gnb__item--1">정보공개</a>
                 <div class="gnb__sub-wrap">
@@ -602,7 +608,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <main id="main">
       <section class="intro">
         <div class="swiper mySwiper intro__slide">
           <ul class="swiper-wrapper intro__slide--wrap">
