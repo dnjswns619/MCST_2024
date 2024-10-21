@@ -108,11 +108,49 @@
     }
   }
 }
-
+// 화면 사이즈 1500opx이하
 @include maxRespond($breakpoint-1500) {
   .cont3 {
     .swiper {
       padding: 0 15px;
+    }
+  }
+}
+// 화면 사이즈 1200px이하
+@include maxRespond($breakpoint-1200) {
+  .cont3 {
+    &__text {
+      display: none;
+    }
+    .swiper {
+      height: 250px;
+      &__slide {
+        &--imgBox {
+          height: 140px;
+        }
+        &--descBox {
+          overflow: hidden;
+          padding: 1rem 0.5rem;
+          border-top: 1px solid #dcdcdc;
+        }
+      }
+    }
+    .sns {
+      right: 15px;
+    }
+  }
+}
+// 화면 사이즈 769이상 1200px이하
+@include minMaxRespond($breakpoint-769, $breakpoint-1200) {
+  .cont3 {
+    .swiper {
+      &__slide {
+        &--descTit {
+          & + .swiper__slide--desc {
+            -webkit-line-clamp: 5;
+          }
+        }
+      }
     }
   }
 }
