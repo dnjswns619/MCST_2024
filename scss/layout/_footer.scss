@@ -114,3 +114,11 @@
     }
   }
 }
+// 화면 사이즈 769px이하
+@include maxRespond($breakpoint-768) {
+  .footer {
+    &__link {
+      font-size: 14px;
+    }
+  }
+}

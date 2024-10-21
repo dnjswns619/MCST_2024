@@ -249,6 +249,7 @@
 @include maxRespond($breakpoint-768) {
   .cont2 {
     &__inner {
+      overflow-x: hidden;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
       height: calc((390px + 470px) + 20px);

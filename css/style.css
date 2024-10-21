@@ -1205,6 +1205,7 @@ input {
 }
 @media screen and (max-width: 768px) {
   .cont2__inner {
+    overflow-x: hidden;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     height: 880px;
@@ -1554,9 +1555,12 @@ input {
 .agency__banner-slide--nextBtn {
   right: -40px;
 }
+.agency__m-banner-wrap {
+  display: none;
+}
 @media (max-width: 1430px) {
   .agency__leftCont {
-    max-width: 24.4056vw;
+    max-width: 23%;
   }
 }
 
@@ -1580,6 +1584,76 @@ input {
   }
   .agency__banner-slide--nextBtn {
     right: -25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .agency {
+    height: 400px;
+  }
+  .agency__inner {
+    display: block;
+  }
+  .agency__inner::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .agency__leftCont {
+    float: left;
+    max-width: 45%;
+    height: 292px;
+  }
+  .agency__rightCont {
+    width: 100%;
+    max-width: 55%;
+    height: 292px;
+  }
+  .agency__select {
+    float: right;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .agency__select-wrap {
+    width: 90%;
+  }
+  .agency__select-wrap:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .agency__banner-wrap {
+    display: none;
+  }
+  .agency__m-banner-wrap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+  }
+  .agency__m-banner-slide {
+    width: calc(100% - 40px);
+  }
+  .agency__m-banner-slide--arrowBtn {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 24px;
+    margin-top: 0;
+    background: url(../images/sprite_img01.png) no-repeat;
+    background-position: -470px 0;
+  }
+  .agency__m-banner-slide--arrowBtn::after {
+    display: none;
+  }
+  .agency__m-banner-slide--arrowBtn.swiper-button-disabled {
+    display: none;
+  }
+  .agency__m-banner-slide--prevBtn {
+    left: 0;
+    transform: translateY(-50%) scaleX(-1);
+  }
+  .agency__m-banner-slide--nextBtn {
+    right: 0;
   }
 }
 .footer {
@@ -1696,5 +1770,10 @@ input {
     margin-left: 0;
     margin-top: 2rem;
     padding-top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__link {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=style.css.map */

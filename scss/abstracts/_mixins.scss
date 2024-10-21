@@ -1,3 +1,8 @@
+@mixin clear {
+  content: "";
+  display: block;
+  clear: both;
+}
 @mixin flexCenter {
   display: flex;
   justify-content: center;
