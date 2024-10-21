@@ -445,3 +445,13 @@
     }
   }
 }
+// 화면 사이즈 480px 이하
+@include maxRespond($breakpoint-480) {
+  .header {
+    &__util {
+      .title__text {
+        font-size: 13px;
+      }
+    }
+  }
+}

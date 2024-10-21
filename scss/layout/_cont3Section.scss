@@ -214,3 +214,27 @@
     }
   }
 }
+// 화면 사이즈 480px 이하
+@include maxRespond($breakpoint-480) {
+  .cont3 {
+    &__inner {
+      height: 280px;
+    }
+    .swiper {
+      height: 170px;
+      &__slide {
+        &--imgBox {
+          height: 80px;
+        }
+        &--desc {
+          font-size: 14px;
+        }
+      }
+    }
+    .sns {
+      top: 4rem;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+}

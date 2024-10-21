@@ -510,6 +510,11 @@ input {
     background-position: -422px 0;
   }
 }
+@media screen and (max-width: 480px) {
+  .header__util .title__text {
+    font-size: 13px;
+  }
+}
 .intro {
   width: 100%;
   height: 480px;
@@ -755,6 +760,11 @@ input {
     bottom: 16px;
   }
 }
+@media screen and (max-width: 480px) {
+  .intro .slide__textBox--title {
+    font-size: 22px;
+  }
+}
 .selectCont__title {
   position: relative;
   font-size: 24px;
@@ -829,7 +839,7 @@ input {
   color: #777;
 }
 .selectCont__selectBtn {
-  padding: 18px 0 13px;
+  padding: 18px 0 0;
   font-size: inherit;
   color: inherit;
   cursor: pointer;
@@ -929,6 +939,20 @@ input {
   }
   .selectCont__grid {
     gap: 0.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .selectCont__list--item {
+    font-size: 14px;
+  }
+  .selectCont__list--date {
+    font-size: 14px;
+  }
+  .selectCont__grid--text {
+    font-size: 14px;
+  }
+  .selectCont__grid--date {
+    font-size: 14px;
   }
 }
 .cont1 {
@@ -1188,13 +1212,13 @@ input {
     font-size: 1rem;
     word-break: keep-all;
   }
+  .cont2 .notice__title {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .cont2__inner {
     gap: 15px;
-  }
-  .cont2 .notice__title {
-    font-size: 20px;
   }
   .cont2 .notice__slideImg {
     object-fit: fill;
@@ -1236,6 +1260,16 @@ input {
   .cont2 .notice__title {
     position: relative;
     width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cont2__inner {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .cont2 .notice__title {
+    font-size: 20px;
   }
 }
 .cont3 {
@@ -1430,6 +1464,25 @@ input {
   }
   .cont3 .swiper-button-next::after {
     background: url(../images/sprite_img01.png) no-repeat -350px -130px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cont3__inner {
+    height: 280px;
+  }
+  .cont3 .swiper {
+    height: 170px;
+  }
+  .cont3 .swiper__slide--imgBox {
+    height: 80px;
+  }
+  .cont3 .swiper__slide--desc {
+    font-size: 14px;
+  }
+  .cont3 .sns {
+    top: 4rem;
+    right: 50%;
+    transform: translateX(50%);
   }
 }
 .agency {
@@ -1656,6 +1709,18 @@ input {
     right: 0;
   }
 }
+@media screen and (max-width: 480px) {
+  .agency {
+    height: 230px;
+  }
+  .agency__leftCont {
+    display: none;
+  }
+  .agency__rightCont {
+    max-width: 100%;
+    height: 126px;
+  }
+}
 .footer {
   display: flex;
   justify-content: center;
@@ -1775,5 +1840,10 @@ input {
 @media screen and (max-width: 768px) {
   .footer__link {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer__address {
+    font-size: 13px;
   }
 }/*# sourceMappingURL=style.css.map */

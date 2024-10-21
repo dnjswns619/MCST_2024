@@ -224,18 +224,20 @@
         }
       }
     }
+    .notice {
+      &__title {
+        font-size: 20px;
+      }
+    }
   }
 }
-// 화면 사이즈 1200px 이하
+// 화면 사이즈 796px이상 1200px 이하
 @include minMaxRespond($breakpoint-769, $breakpoint-1200) {
   .cont2 {
     &__inner {
       gap: 15px;
     }
     .notice {
-      &__title {
-        font-size: 20px;
-      }
       &__slideImg {
         object-fit: fill;
       }
@@ -283,6 +285,21 @@
       &__title {
         position: relative;
         width: 100%;
+      }
+    }
+  }
+}
+// 화면 사이즈 480px 이하
+@include maxRespond($breakpoint-480) {
+  .cont2 {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+    .notice {
+      &__title {
+        font-size: 20px;
       }
     }
   }
