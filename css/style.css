@@ -1110,6 +1110,27 @@ input {
   border: 1px solid #000;
 }
 
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .cont2__inner {
+    gap: 15px;
+  }
+  .cont2 .recommend__title {
+    font-size: 20px;
+  }
+  .cont2 .recommend__link--text {
+    font-size: 1rem;
+    word-break: keep-all;
+  }
+  .cont2 .notice__title {
+    font-size: 20px;
+  }
+  .cont2 .notice__slideImg {
+    object-fit: fill;
+  }
+  .cont2 .notice .swiper-pagination {
+    letter-spacing: -1px;
+  }
+}
 .cont3 {
   margin-top: 56px;
 }
