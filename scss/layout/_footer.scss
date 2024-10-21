@@ -77,3 +77,40 @@
     }
   }
 }
+
+// 화면 사이즈 1200px이하
+@include maxRespond($breakpoint-1200) {
+  .footer {
+    margin: 1.3rem 0;
+    &__inner {
+      flex-direction: column;
+    }
+    &__left {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.7rem;
+    }
+    &__info {
+      &-wrap {
+        align-items: center;
+      }
+      &--link {
+        justify-content: center;
+        column-gap: 0.7rem;
+      }
+      &--desc {
+        text-align: center;
+      }
+    }
+    &__link-list {
+      padding: 5px 0.7rem 5px 0;
+    }
+    &__right {
+      justify-content: center;
+      gap: 1.4rem;
+      margin-left: 0;
+      margin-top: 2rem;
+      padding-top: 0;
+    }
+  }
+}
