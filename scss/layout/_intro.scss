@@ -191,3 +191,57 @@
     }
   }
 }
+// 화면 사이즈 768px 이하
+@include maxRespond($breakpoint-768) {
+  .intro {
+    height: auto;
+    .slide {
+      &__inner {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 15px 80px;
+      }
+      &__textBox {
+        width: 100%;
+        padding: 20px 0;
+        &--title {
+          margin-bottom: 20px;
+          font-size: 1.5rem;
+          -webkit-line-clamp: 1;
+        }
+        &--info {
+          @include textEllipsis-1;
+          font-size: 1rem;
+        }
+        &--moreBtn {
+          position: absolute;
+          bottom: 16px;
+          width: 105px;
+          padding-top: 10px;
+          margin-top: 0;
+          background-position: top -73px left -90px;
+          font-size: 14px;
+        }
+      }
+      &__imgBox {
+        width: 100%;
+        &--link {
+          height: auto;
+        }
+        &--img {
+          width: 100%;
+          height: auto;
+          object-fit: initial;
+        }
+      }
+    }
+    .swiper {
+      &__btn {
+        left: auto;
+        right: 15px;
+        bottom: 16px;
+      }
+    }
+  }
+}
