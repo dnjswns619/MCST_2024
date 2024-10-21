@@ -60,6 +60,11 @@
         @include textEllipsis-2;
       }
     }
+    &__button{
+      &--arrow {
+        display: none;
+      }
+    }
   }
   .policy {
     &__slide {
@@ -151,6 +156,58 @@
         &--descTit {
           & + .swiper__slide--desc {
             -webkit-line-clamp: 5;
+          }
+        }
+      }
+    }
+  }
+}
+// 화면 사이즈 768px 이하
+@include maxRespond($breakpoint-768) {
+  .cont3 {
+    &__inner {
+      height: 320px;
+    }
+    .swiper {
+      &__slide {
+        &--descBox {
+          padding: 1rem 1rem 0;
+        }
+        &--descTit {
+          & + .swiper__slide--desc {
+            -webkit-line-clamp: 6;
+          }
+        }
+      }
+    }
+    .swiper {
+      &__button {
+        &--arrow {
+          display: flex;
+          width: 37px;
+          height: 55px;
+          background-color: rgba(0, 0, 0, 0.6);
+          color: transparent;
+          &::after {
+            width: 18px;
+            height: 34px;
+          }
+          &.swiper-button-disabled {
+            display: none;
+          }
+        }
+      }
+      &-button {
+        &-prev {
+          left: 0;
+          &::after {
+            background: url(../../images/sprite_img01.png) no-repeat -320px -130px;
+          }
+        }
+        &-next {
+          right: 0;
+          &::after {
+            background: url(../../images/sprite_img01.png) no-repeat -350px -130px;
           }
         }
       }
