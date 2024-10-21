@@ -114,10 +114,35 @@
     }
   }
 }
+// 화면 사이즈 1200px이하
 @include maxRespond($breakpoint-1200) {
   .agency {
     &__rightCont {
       flex-grow: 1;
+    }
+  }
+}
+// 화면 사이즈 769px이상 1200px이하
+@include minMaxRespond($breakpoint-769, $breakpoint-1200) {
+  .agency {
+    &__select {
+      &-wrap {
+        width: 42%;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
+    &__banner-wrap {
+      width: calc(75% + 70px);
+    }
+    &__banner-slide {
+      &--prevBtn {
+        left: -25px;
+      }
+      &--nextBtn {
+        right: -25px;
+      }
     }
   }
 }
