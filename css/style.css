@@ -925,24 +925,27 @@ input {
   color: #fff;
 }
 .cont2 .recommend__wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 320px;
-  border-collapse: collapse;
+  border-top: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
 }
 .cont2 .recommend__item {
-  border: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
 }
 .cont2 .recommend__link {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
   width: 100%;
   height: 100%;
-  padding-bottom: 32px;
+  padding-top: 42px;
 }
 .cont2 .recommend__link:hover .recommend__link--text {
   text-decoration: underline;
@@ -959,6 +962,7 @@ input {
 .cont2 .recommend__link--text {
   font-size: 1.2rem;
   color: #343434;
+  text-align: center;
 }
 .cont2 .recommend__link--2 .recommend__link--img {
   background-position: left -60px center;
