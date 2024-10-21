@@ -211,11 +211,8 @@
   }
 }
 // 화면 사이즈 1200px 이하
-@include minMaxRespond($breakpoint-769, $breakpoint-1200) {
+@include maxRespond($breakpoint-1200) {
   .cont2 {
-    &__inner {
-      gap: 15px;
-    }
     .recommend {
       &__title {
         font-size: 20px;
@@ -227,6 +224,14 @@
         }
       }
     }
+  }
+}
+// 화면 사이즈 1200px 이하
+@include minMaxRespond($breakpoint-769, $breakpoint-1200) {
+  .cont2 {
+    &__inner {
+      gap: 15px;
+    }
     .notice {
       &__title {
         font-size: 20px;
@@ -236,6 +241,47 @@
       }
       .swiper-pagination {
         letter-spacing: -1px;
+      }
+    }
+  }
+}
+// 화면 사이즈 768px 이하
+@include maxRespond($breakpoint-768) {
+  .cont2 {
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      height: calc((390px + 470px) + 20px);
+    }
+    &__left {
+      height: 390px;
+    }
+    &__middle {
+      height: 390px;
+    }
+    &__right {
+      justify-content: center;
+      grid-column: 1 / 3;
+      width: calc(100% + 60px);
+      height: 470px;
+      margin-left: -30px;
+      padding: 40px 30px;
+      background: #f7f7f7;
+      &--box {
+        position: relative;
+        width: 100%;
+        max-width: 473px;
+      }
+    }
+    .news {
+      &__desc {
+        font-size: 14px;
+      }
+    }
+    .notice {
+      &__title {
+        position: relative;
+        width: 100%;
       }
     }
   }
