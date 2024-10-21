@@ -31,9 +31,11 @@
       height: calc((330px * 2) + 40px);
     }
     &__left {
+      width: 100%;
       height: 330px;
     }
     &__right {
+      width: 100%;
       height: 330px;
     }
   }

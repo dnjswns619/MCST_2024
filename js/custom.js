@@ -106,12 +106,32 @@ window.addEventListener("load", () => {
     },
   });
   const policySwiperSlide = new Swiper(".policy__slide", {
-    slidesPerView: 4,
-    spaceBetween: 30,
+    slidesPerView: 2,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".policy__slide--nextBtn",
+      prevEl: ".policy__slide--prevBtn",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,  //브라우저가 768보다 클 때
+        spaceBetween: 30,
+      }
+    },
   });
   const nuriSwiperSlide = new Swiper(".nuri__slide", {
-    slidesPerView: 4,
-    spaceBetween: 30,
+    slidesPerView: 2,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".nuri__slide--nextBtn",
+      prevEl: ".nuri__slide--prevBtn",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,  //브라우저가 768보다 클 때
+        spaceBetween: 30,
+      }
+    },
   });
   const agencyBannerSlide = new Swiper(".agency__banner-slide", {
     slidesPerView: 5,
