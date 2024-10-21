@@ -51,6 +51,7 @@ window.addEventListener("load", () => {
   mobileMenuBtn.addEventListener("click", () => {
     menuWrap.classList.add(CLASS_ON);
     document.body.classList.add("menuActive")
+    gnbSubWrap[0].classList.add(CLASS_ON);
   })
   function windowSize(width, height) {
     if(width < 1200) {
