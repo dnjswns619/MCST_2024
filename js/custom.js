@@ -74,6 +74,30 @@ window.addEventListener("load", () => {
     document.body.classList.remove("menuActive")
   })
 
+  // header language클릭시 다른 언어 list 보이기
+  const currentLanguage = document.querySelector('.header__util--wrap .util__item--3');
+  const languageLists = document.querySelector('#languageList');
+  const mCurrentLanguage = document.querySelector('.m-menu__util--wrap .util__item--3');
+  const mLanguageLists = document.querySelector('#m_languageList');
+  const ariaList = ["aria-expanded", "aria-pressed"];
+  let languageAriaState = false;
+  let mobileLanguageAriaState = false;
+  
+  const toggleAriaState = (element, ariaState) => {
+    ariaList.forEach(aria => {
+      element.setAttribute(aria, ariaState ? "false" : "true");
+    });
+    return !ariaState;
+  };
+  currentLanguage.addEventListener('click', () => {
+    languageLists.classList.toggle("block");
+    languageAriaState = toggleAriaState(currentLanguage, languageAriaState);
+  });
+  mCurrentLanguage.addEventListener('click', () => {
+    mLanguageLists.classList.toggle('block');
+    mobileLanguageAriaState = toggleAriaState(mCurrentLanguage, mobileLanguageAriaState);
+  });
+
   const introSwiperSlide = new Swiper(".intro__slide", {
     spaceBetween: 30,
     centeredSlides: true,

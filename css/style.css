@@ -183,11 +183,13 @@ input {
   background: url(../images/bg_lang.png) no-repeat;
 }
 .header .util .language {
+  z-index: 60;
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
+  background-color: #fff;
   border: 1px solid var(--color-main);
   border-top: none;
 }
@@ -206,7 +208,7 @@ input {
   color: var(--color-main);
   text-align: center;
 }
-.header .util .language.active {
+.header .util .language.block {
   display: block;
 }
 .header .m-menu__util--wrap {
@@ -434,6 +436,9 @@ input {
   .header__gnb-wrap .util__item-btn {
     font-size: 14px;
     color: #000;
+  }
+  .header__gnb-wrap .util .language {
+    border-top: 1px solid #8c9bb3;
   }
   .header .gnb__item {
     width: 40%;
