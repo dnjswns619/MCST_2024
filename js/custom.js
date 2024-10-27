@@ -237,16 +237,31 @@ window.addEventListener("load", () => {
   autoSlideControl(".intro", introSwiperSlide);
   autoSlideControl(".notice", noticeSwiperSlide);
 
-  // 메뉴 클릭시 하단 컨텐츠 변화
+  // 메뉴 클릭시 하단 컨텐츠 변화 && 메뉴 클릭시 aria-selected 변경
   function activeTitleCont(parent) {
     const contWrap = document.querySelectorAll(`.${parent} .selectCont__wrap`);
     const titleBtn = document.querySelectorAll(`.${parent} .selectCont__selectBtn`);
-    titleBtn.forEach(btn => {
+    
+    const updateAriaSelectedValue = (idx, value) => {
+      // 함수 호출 시 titleBtn들의 aria-selected를 false로 초기화 시킨후 클릭한 버튼의 aria-selected true로 변경
+      titleBtn.forEach((btn) => {
+        btn.setAttribute("aria-selected", false)
+      })
+      titleBtn[idx].setAttribute("aria-selected", value);
+    }
+    titleBtn.forEach((btn, idx) => {
+      // 웹 처음 진입시 활성화 되어 있는 컨텐츠의 aria-selected 변경
+      if(btn.closest(".selectCont__wrap").classList.contains("active")) {
+        btn.setAttribute("aria-selected", true);
+      }
+
       btn.addEventListener("click", () => {
         contWrap.forEach(cont => {
           cont.classList.remove("active");
         })
         btn.closest(".selectCont__wrap").classList.add("active");
+
+        updateAriaSelectedValue(idx, btn.closest(".selectCont__wrap").classList.contains("active"))
       })
     })
   }
