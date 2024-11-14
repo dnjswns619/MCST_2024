@@ -94,7 +94,7 @@ input {
 
 @font-face {
   font-family: "NotoSansKR";
-  src: url(../../fonts/NotoSansKR-Medium.woff) format("woff");
+  src: url(../fonts/NotoSansKR-Medium.woff) format("woff");
 }
 .header__wrap {
   position: relative;
@@ -260,7 +260,7 @@ input {
   align-items: center;
   height: 100%;
 }
-.header .gnb__item--title {
+.header .gnb__item-title {
   display: flex;
   align-items: center;
   position: relative;
@@ -268,11 +268,12 @@ input {
   height: 100%;
   color: var(--color-text);
   font-size: 1.3rem;
+  white-space: noWrap;
 }
-.header .gnb__item--title:hover {
+.header .gnb__item-title:hover {
   color: var(--color-gnbHover);
 }
-.header .gnb__item--title:hover::after {
+.header .gnb__item-title:hover::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -280,7 +281,7 @@ input {
   height: 4px;
   background-color: var(--color-main);
 }
-.header .gnb__item--title:hover + .gnb__sub-wrap {
+.header .gnb__item-title:hover + .gnb__sub-wrap {
   display: flex;
 }
 .header .gnb__sub {

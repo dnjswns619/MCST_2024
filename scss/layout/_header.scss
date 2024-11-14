@@ -138,7 +138,7 @@
     &__item {
       @include flexCenter;
       height: 100%;
-      &--title {
+      &-title {
         display: flex;
         align-items: center;
         position: relative;
@@ -146,6 +146,7 @@
         height: 100%;
         color: var(--color-text);
         font-size: 1.3rem;
+        white-space: noWrap;
         &:hover {
           color: var(--color-gnbHover);
           &::after {
